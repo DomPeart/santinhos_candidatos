@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#082d59">
+  <meta name="description" content="Crie e baixe sua foto de apoio à campanha.">
+  <title>Eu apoio esta ideia</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Página inicial">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      <span><strong>JÚLIO CÉSAR</strong><small>CANDIDATO A SENADOR</small></span>
+    </a>
+    <a class="header-link" href="#como-funciona">Como funciona</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">JUNTOS POR UM NOVO CAMINHO</span>
+        <h1>Mostre que você<br><em>apoia essa ideia.</em></h1>
+        <p>Coloque sua foto na moldura da campanha e compartilhe essa mensagem com quem você ama.</p>
+        <a class="primary-button" href="#criar">Criar minha foto <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="portrait-placeholder"><span>JC</span></div>
+        <div class="hero-sticker">EU<br><strong>APOIO!</strong></div>
+      </div>
+    </section>
+
+    <section class="creator" id="criar">
+      <div class="section-heading">
+        <span class="step-label">É RÁPIDO E FÁCIL</span>
+        <h2>Crie sua foto de apoio</h2>
+        <p>Envie uma foto, ajuste do seu jeito e baixe para compartilhar.</p>
+      </div>
+
+      <div class="workspace">
+        <div class="preview-column">
+          <div class="canvas-shell" id="canvasShell">
+            <canvas id="editorCanvas" width="1080" height="1080" aria-label="Prévia da sua foto com a moldura da campanha"></canvas>
+            <div class="empty-state" id="emptyState">
+              <div class="upload-icon" aria-hidden="true">↑</div>
+              <strong>Sua foto aparece aqui</strong>
+              <span>Envie uma imagem para começar</span>
+            </div>
+          </div>
+          <p class="drag-hint" id="dragHint" hidden>Arraste a foto para reposicionar</p>
+        </div>
+
+        <div class="controls">
+          <fieldset class="format-picker">
+            <legend>Escolha o formato</legend>
+            <button class="format-button selected" type="button" data-format="feed" aria-pressed="true">
+              <span class="format-icon round" aria-hidden="true"></span>
+              <span><strong>Adesivo redondo</strong><small>Circular • 1080 × 1080</small></span>
+            </button>
+            <button class="format-button" type="button" data-format="story" aria-pressed="false">
+              <span class="format-icon story" aria-hidden="true"></span>
+              <span><strong>Story</strong><small>Vertical • 1080 × 1920</small></span>
+            </button>
+          </fieldset>
+
+          <div class="control-step active-step">
+            <span class="number">1</span>
+            <div>
+              <h3>Escolha sua foto</h3>
+              <p>Use uma imagem nítida; você poderá ajustar o enquadramento.</p>
+              <label class="file-button" for="photoInput">Selecionar foto</label>
+              <input id="photoInput" type="file" accept="image/*">
+            </div>
+          </div>
+
+          <div class="control-step" id="adjustStep">
+            <span class="number">2</span>
+            <div>
+              <h3>Ajuste o enquadramento</h3>
+              <p>Use o controle de zoom e arraste a imagem.</p>
+              <label class="range-label" for="zoomRange"><span>Zoom</span><output id="zoomValue">100%</output></label>
+              <input class="range" id="zoomRange" type="range" min="100" max="300" value="100" disabled>
+              <button class="text-button" id="resetButton" type="button" disabled>Centralizar foto</button>
+            </div>
+          </div>
+
+          <div class="control-step">
+            <span class="number">3</span>
+            <div>
+              <h3>Baixe e compartilhe</h3>
+              <p>Sua imagem será gerada em alta resolução.</p>
+              <button class="download-button" id="downloadButton" type="button" disabled>Baixar minha foto <span aria-hidden="true">↓</span></button>
+            </div>
+          </div>
+
+          <details class="frame-settings">
+            <summary>Usar a arte oficial da campanha</summary>
+            <p>Selecione a moldura PNG transparente enviada pelo designer.</p>
+            <label class="outline-button" for="frameInput">Trocar moldura (PNG)</label>
+            <input id="frameInput" type="file" accept="image/png">
+            <button class="text-button" id="defaultFrameButton" type="button">Restaurar moldura oficial</button>
+          </details>
+          <p class="privacy-note">🔒 Sua foto é processada somente neste dispositivo e não é enviada para nenhum servidor.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="how" id="como-funciona">
+      <span class="step-label">COMO FUNCIONA</span>
+      <h2>Pronto em três passos</h2>
+      <div class="how-grid">
+        <article><span>01</span><h3>Envie</h3><p>Escolha uma foto da sua galeria.</p></article>
+        <article><span>02</span><h3>Ajuste</h3><p>Arraste e dê zoom até ficar perfeito.</p></article>
+        <article><span>03</span><h3>Compartilhe</h3><p>Baixe e publique nas suas redes.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer><strong>JÚLIO CÉSAR • 555</strong><span>Dados da coligação e CNPJ eleitoral</span><small>© 2026 — Todos os direitos reservados.</small></footer>
+  <script src="app.js"></script>
+</body>
+</html>
