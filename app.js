@@ -14,7 +14,7 @@ const formatButtons = document.querySelectorAll('.format-button');
 
 const formats = {
   feed: { src: 'assets/moldura-julio-cesar.png', width: 1080, height: 1080, filename: 'adesivo-julio-cesar-555.png' },
-  story: { src: 'assets/moldura-story-sem-instrucao.png', width: 1080, height: 1920, filename: 'to-com-julio-cesar-555-story.png' }
+  story: { src: 'modelo_stories.png', width: 1080, height: 1920, filename: 'to-com-julio-cesar-555-story.png' }
 };
 
 const state = { photo: null, frame: null, format: 'feed', baseScale: 1, zoom: 1, x: 0, y: 0, dragging: false, pointerX: 0, pointerY: 0 };
